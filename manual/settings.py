@@ -13,13 +13,13 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import socket
 
-if socket.gethostname()=="yzmac.lan" or "yzmac.local":
+if socket.gethostname()=="yzmac.lan" or socket.gethostname()=="yzmac.local":
     
     DEBUG = True
     # MySql
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql', #mysql-connect-python-rf
+            'ENGINE': 'django.db.backends.mysql', 
             'NAME': 'manual',
             'USER': 'root',
             'PASSWORD': '',
